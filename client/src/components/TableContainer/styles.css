@@ -1,6 +1,39 @@
 .fill {
     position: absolute;
-    top: 0px; /* Header Height */
-    bottom: 0px; /* Footer Height */
+    top: 0px;
+    /* Header Height */
+    bottom: 0px;
+    /* Footer Height */
     width: 100%;
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.spinner-container {
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.loading {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.refresh {
+    width: 150px
+}
+
+.refresh-text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
 }

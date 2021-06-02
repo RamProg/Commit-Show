@@ -1,0 +1,65 @@
+[
+    {
+        "author": {
+            "name": "rpena",
+            "email": "rpena@tagroupholdings.com",
+            "date": "2021-06-02T04:22:34Z"
+        },
+        "message": "formatting table on frontend and striping data on backend",
+        "nro": 1
+    },
+    {
+        "author": {
+            "name": "rpena",
+            "email": "rpena@tagroupholdings.com",
+            "date": "2021-06-02T02:06:15Z"
+        },
+        "message": "implemented bootstrap",
+        "nro": 2
+    },
+    {
+        "author": {
+            "name": "rpena",
+            "email": "rpena@tagroupholdings.com",
+            "date": "2021-06-02T00:30:13Z"
+        },
+        "message": "created CommitTable component",
+        "nro": 3
+    },
+    {
+        "author": {
+            "name": "rpena",
+            "email": "rpena@tagroupholdings.com",
+            "date": "2021-06-01T23:03:01Z"
+        },
+        "message": "repo endpoint created",
+        "nro": 4
+    },
+    {
+        "author": {
+            "name": "rpena",
+            "email": "rpena@tagroupholdings.com",
+            "date": "2021-06-01T22:29:36Z"
+        },
+        "message": "comitting first react app and node back",
+        "nro": 5
+    },
+    {
+        "author": {
+            "name": "rpena",
+            "email": "rpena@tagroupholdings.com",
+            "date": "2021-06-01T22:28:33Z"
+        },
+        "message": "created react app and node back",
+        "nro": 6
+    },
+    {
+        "author": {
+            "name": "rpena",
+            "email": "rpena@tagroupholdings.com",
+            "date": "2021-06-01T22:08:10Z"
+        },
+        "message": "first commit",
+        "nro": 7
+    }
+]
