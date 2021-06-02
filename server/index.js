@@ -1,6 +1,6 @@
 const express = require("express");
 
-const { getRepo } = require("./utils/getRepo");
+const { getRepo } = require("./api/getRepo");
 
 const PORT = process.env.PORT || 3001;
 

@@ -1,29 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Layout from "./layout.js";
-import CommitTable from "./CommitTable/container";
-import demo from "../assets/demo.json";
+// import demo from "../assets/demo.json";
 
 function TableContainer() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const [availableData, setAvailableData] = useState(false);
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
       const res = await fetch("/repo");
       const info = await res.json();
       assignData(info);
-      setLoading(false)
+      setLoading(false);
     } catch (e) {
       console.log("There was an error", e);
       noData();
     }
-  };
+  }, []);
 
   useEffect(() => {
-    // fetchData();
-    assignData(demo);
-  }, []);
+    fetchData();
+    // assignData(demo);
+  }, [fetchData]);
 
   const noData = () => {
     setAvailableData(false);
@@ -37,7 +36,7 @@ function TableContainer() {
 
   const handleRefresh = () => {
     setLoading(true);
-    fetchData()
+    fetchData();
   };
 
   return (
