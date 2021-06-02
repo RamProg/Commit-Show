@@ -1,6 +1,6 @@
 const express = require("express");
 
-const {getRepo} = require("./utils/getRepo");
+const { getRepo } = require("./utils/getRepo");
 
 const PORT = process.env.PORT || 3001;
 
@@ -12,7 +12,7 @@ app.get("/api", (req, res) => {
 
 app.get("/repo", async (req, res) => {
   const result = await getRepo();
-  res.json(result)
+  res.json(result);
 });
 
 app.listen(PORT, () => {

@@ -1,24 +1,9 @@
-import React, {useEffect, useState} from "react";
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import CommitTable from "./components/CommitTable/container";
 
 function App() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Starting..." : data}</p>
-      </header>
-    </div>
-  );
+  return <CommitTable></CommitTable>;
 }
 
 export default App;
