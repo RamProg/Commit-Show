@@ -17,8 +17,6 @@ function TableContainer() {
     try {
       const res = await fetch("/repo");
       const info = await res.json();
-      console.log(data && data.length);
-      console.log(info.length);
       assignData(info);
       if (refresh && data && info && data.length === info.length)
         setNoNewData(true);
