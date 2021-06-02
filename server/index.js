@@ -11,8 +11,12 @@ app.get("/api", (req, res) => {
 });
 
 app.get("/repo", async (req, res) => {
-  const result = await getRepo();
-  res.json(result);
+  try {
+    const result = await getRepo();
+    res.json(result);
+  } catch (e) {
+    console.log("There was an error", e);
+  }
 });
 
 app.listen(PORT, () => {

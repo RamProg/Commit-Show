@@ -1,39 +1,35 @@
 import React, { useEffect, useState } from "react";
-import Table from "react-bootstrap/Table";
+import Layout from "./layout.js";
 import "./styles.css";
 
 function CommitTable() {
   const [data, setData] = useState([]);
+  const [availableData, setAvailableData] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("/repo");
-      const info = await res.json();
-      assignData(info);
+      try {
+        const res = await fetch("/repo");
+        const info = await res.json();
+        assignData(info);
+      } catch (e) {
+        console.log("There was an error", e);
+        noData();
+      }
     }
     fetchData();
   }, []);
 
+  const noData = () => {
+    setAvailableData(false);
+  };
+
   const assignData = (info) => {
+    setAvailableData(true);
     setData(info);
   };
 
-  return (
-    <Table striped bordered hover variant="dark">
-      <thead>
-        <tr>
-          <th>Commit</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((e) => (
-          <tr>
-            <td>{e.commit.message}</td>
-          </tr>
-        ))}
-      </tbody>
-    </Table>
-  );
+  return <Layout data={data} availableData={availableData}/>;
 }
 
 export default CommitTable;
