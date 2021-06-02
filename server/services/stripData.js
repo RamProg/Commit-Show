@@ -1,3 +1,7 @@
+// This function deletes any data from the json that the frontend doesn't need
+// This way the package is lighter
+// It will also prevent the frontend from having access to pivate data
+
 exports.stripData = (data) => {
   let result = [];
   const DATA_SIZE = data.length;
