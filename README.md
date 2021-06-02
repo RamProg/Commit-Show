@@ -47,7 +47,8 @@ This will start the backend. The terminal should display a message like:
 You need to open a new console and run:
 
 ```
-cd cliente
+cd client
+npm install
 npm start
 ```
 
