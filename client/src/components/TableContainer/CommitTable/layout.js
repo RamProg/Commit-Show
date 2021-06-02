@@ -30,7 +30,14 @@ function Layout({ data, availableData }) {
         </tbody>
       ) : (
         <tbody>
-          <tr><td>Sorry, there is no available data right now.</td></tr>
+          <tr>
+            <td>Sorry, there is no available data right now.</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
         </tbody>
       )}
     </Table>
